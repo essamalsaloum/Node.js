@@ -101,7 +101,10 @@ function updateLine() {
 	if (isNaN(valOfOptions) === true) {
 	return console.log("That is not a number, you must input a number!");
 	}
-	if (valOfOptions > todos.length || valOfOptions <= 0) {
+    if (options.slice(2).length<=0) {
+	return console.log("There is no text for the added item, you must input text!");
+	}
+	if (valOfOptions > todos.length || valOfOptions <= 0 || options.slice(2).length<=0) {
 		console.log('\n' + '"Check the number and enter an appropriate number"' + '\n');
 	} else {
 		console.log(valOfOptions);
